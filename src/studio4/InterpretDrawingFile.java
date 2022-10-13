@@ -15,10 +15,63 @@ import edu.princeton.cs.introcs.StdDraw;
 public class InterpretDrawingFile {
 
 	public static void main(String[] args) throws FileNotFoundException {
+		System.out.print(" ");
 		JFileChooser chooser = new JFileChooser("resources");
 		chooser.showOpenDialog(null);
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
+		
+		String shapeType = in.next();
+		System.out.print(shapeType);
+		
+		int redComponent = in.nextInt();
+		
+		int greenComponent = in.nextInt();
+		
+		int blueComponent = in.nextInt();
+		
+		boolean isFilled = in.nextBoolean();
+		
+		double parameterOne = in.nextDouble();
+		
+		double parameterTwo = in.nextDouble();
+		
+		double parameterThree = in.nextDouble();
+		
+		double parameterFour = in.nextDouble();
+		
+		double parameterFive = in.nextDouble();
+		
+		double parameterSix = in.nextDouble();
+		
+		System.out.print(shapeType);
+		//String shape = in.next();
+		//System.out.print(shape);
+		
+		if (isFilled == true) {
+			if (shapeType.equals("rectangle")) {
+				
+				StdDraw.filledRectangle(parameterOne, parameterTwo, parameterThree, parameterFour);
+				
+				
+			}
+			
+			
+			
+			if (shapeType.equals("ellipse")) {
+				
+				StdDraw.filledRectangle(parameterOne, parameterTwo, parameterThree, parameterFour);
+				
+				
+			}
+			//StdDraw.filledshapeType(parameterOne, parameterTwo, parameterThree, parameterFour);
+
+		} else {
+			
+			
+			
+			
+		}
 		
 	}
 }
